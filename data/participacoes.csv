@@ -1,0 +1,669 @@
+participacao_id,projeto_id,profissional_id,papel,horas
+1,1,4,Líder Técnico,209.47
+2,1,5,Apoio Técnico,93.79
+3,1,10,Líder Técnico,86.87
+4,2,1,Apoio Técnico,137.75
+5,2,6,Analista,237.35
+6,2,8,Apoio Técnico,38.17
+7,3,4,Desenvolvedor,226.60
+8,3,6,Líder Técnico,59.99
+9,4,3,Apoio Técnico,192.22
+10,4,4,Apoio Técnico,175.87
+11,4,10,Analista,132.34
+12,5,7,Analista,41.22
+13,5,9,Analista,31.23
+14,6,4,Analista,197.92
+15,6,6,Desenvolvedor,128.23
+16,6,8,Líder Técnico,197.21
+17,6,9,Líder Técnico,49.14
+18,7,3,Desenvolvedor,75.80
+19,7,5,Desenvolvedor,201.46
+20,7,6,Apoio Técnico,116.00
+21,7,9,Analista,73.64
+22,8,2,Analista,181.13
+23,8,5,Analista,171.49
+24,8,7,Apoio Técnico,130.67
+25,8,8,Analista,232.17
+26,9,2,Apoio Técnico,224.44
+27,9,6,Desenvolvedor,157.25
+28,10,2,Apoio Técnico,137.33
+29,10,6,Líder Técnico,61.35
+30,10,7,Desenvolvedor,172.86
+31,10,8,Líder Técnico,123.86
+32,11,2,Líder Técnico,195.99
+33,11,5,Analista,185.92
+34,11,8,Apoio Técnico,233.44
+35,12,2,Líder Técnico,160.08
+36,12,6,Apoio Técnico,131.75
+37,12,9,Apoio Técnico,70.04
+38,13,1,Apoio Técnico,150.06
+39,13,5,Apoio Técnico,84.10
+40,13,6,Líder Técnico,136.48
+41,13,10,Desenvolvedor,62.95
+42,14,1,Analista,48.55
+43,14,4,Desenvolvedor,30.68
+44,14,6,Apoio Técnico,71.56
+45,14,8,Apoio Técnico,49.58
+46,15,1,Analista,130.86
+47,15,3,Analista,239.06
+48,15,4,Analista,79.86
+49,15,8,Líder Técnico,223.74
+50,16,2,Líder Técnico,96.88
+51,16,6,Desenvolvedor,193.97
+52,16,9,Apoio Técnico,125.17
+53,16,10,Líder Técnico,115.10
+54,17,1,Líder Técnico,76.55
+55,17,8,Líder Técnico,197.61
+56,17,9,Apoio Técnico,205.63
+57,18,4,Analista,113.03
+58,18,7,Apoio Técnico,151.56
+59,18,9,Apoio Técnico,123.97
+60,19,1,Apoio Técnico,113.53
+61,19,3,Líder Técnico,230.43
+62,20,1,Analista,152.62
+63,20,3,Apoio Técnico,49.46
+64,20,10,Apoio Técnico,74.61
+65,21,2,Desenvolvedor,226.99
+66,21,3,Líder Técnico,151.42
+67,21,4,Líder Técnico,227.42
+68,21,7,Apoio Técnico,174.54
+69,22,5,Desenvolvedor,215.27
+70,22,8,Desenvolvedor,177.22
+71,22,10,Apoio Técnico,119.84
+72,23,2,Desenvolvedor,74.90
+73,23,4,Líder Técnico,38.68
+74,24,7,Analista,226.95
+75,24,8,Apoio Técnico,206.98
+76,24,9,Líder Técnico,60.74
+77,24,10,Apoio Técnico,91.89
+78,25,3,Líder Técnico,126.39
+79,25,7,Desenvolvedor,140.43
+80,25,9,Desenvolvedor,208.71
+81,26,6,Analista,68.50
+82,26,8,Apoio Técnico,75.66
+83,27,4,Líder Técnico,85.83
+84,27,5,Desenvolvedor,155.88
+85,28,1,Analista,121.65
+86,28,4,Líder Técnico,29.62
+87,28,6,Analista,104.76
+88,28,7,Apoio Técnico,121.50
+89,29,1,Analista,41.33
+90,29,9,Desenvolvedor,183.06
+91,30,2,Desenvolvedor,53.52
+92,30,3,Desenvolvedor,52.54
+93,30,10,Desenvolvedor,88.18
+94,31,1,Apoio Técnico,47.79
+95,31,2,Apoio Técnico,222.45
+96,31,4,Apoio Técnico,238.66
+97,31,5,Líder Técnico,203.76
+98,32,1,Apoio Técnico,143.38
+99,32,4,Líder Técnico,107.45
+100,32,7,Analista,153.98
+101,32,10,Analista,209.51
+102,33,2,Analista,65.05
+103,33,3,Analista,131.45
+104,33,8,Analista,188.04
+105,33,10,Desenvolvedor,225.87
+106,34,5,Líder Técnico,82.80
+107,34,7,Apoio Técnico,174.66
+108,34,9,Desenvolvedor,164.35
+109,35,1,Desenvolvedor,236.10
+110,35,2,Desenvolvedor,158.22
+111,35,6,Desenvolvedor,36.62
+112,36,2,Líder Técnico,29.82
+113,36,9,Analista,93.42
+114,37,8,Desenvolvedor,66.76
+115,37,9,Analista,214.74
+116,38,3,Líder Técnico,34.67
+117,38,4,Líder Técnico,199.25
+118,38,7,Desenvolvedor,52.13
+119,39,1,Líder Técnico,177.43
+120,39,7,Líder Técnico,46.53
+121,40,2,Analista,65.17
+122,40,3,Apoio Técnico,190.08
+123,40,4,Analista,218.29
+124,40,7,Líder Técnico,131.66
+125,41,4,Analista,101.61
+126,41,5,Desenvolvedor,56.53
+127,41,9,Líder Técnico,193.18
+128,41,10,Analista,57.48
+129,42,5,Apoio Técnico,183.53
+130,42,6,Desenvolvedor,87.65
+131,43,7,Desenvolvedor,82.93
+132,43,10,Desenvolvedor,221.55
+133,44,1,Analista,143.62
+134,44,4,Apoio Técnico,41.01
+135,44,5,Apoio Técnico,113.81
+136,44,7,Desenvolvedor,58.38
+137,45,1,Líder Técnico,63.19
+138,45,4,Apoio Técnico,190.58
+139,45,5,Apoio Técnico,69.34
+140,46,2,Desenvolvedor,69.53
+141,46,4,Apoio Técnico,61.06
+142,46,7,Líder Técnico,58.64
+143,47,2,Analista,81.24
+144,47,3,Analista,195.85
+145,47,9,Desenvolvedor,55.49
+146,47,10,Apoio Técnico,161.16
+147,48,2,Analista,136.78
+148,48,3,Líder Técnico,229.57
+149,48,4,Analista,26.35
+150,48,7,Apoio Técnico,73.82
+151,49,5,Desenvolvedor,61.42
+152,49,9,Líder Técnico,71.40
+153,50,2,Apoio Técnico,24.82
+154,50,5,Analista,231.38
+155,50,9,Analista,24.69
+156,50,10,Desenvolvedor,125.34
+157,51,6,Apoio Técnico,164.81
+158,51,8,Analista,55.88
+159,51,9,Analista,52.38
+160,52,1,Desenvolvedor,108.63
+161,52,4,Líder Técnico,31.07
+162,52,9,Líder Técnico,73.84
+163,53,1,Desenvolvedor,232.14
+164,53,2,Apoio Técnico,201.28
+165,53,3,Apoio Técnico,130.67
+166,53,6,Analista,53.36
+167,54,2,Analista,93.78
+168,54,7,Desenvolvedor,83.76
+169,55,3,Analista,177.34
+170,55,4,Líder Técnico,178.16
+171,55,6,Analista,158.35
+172,55,10,Apoio Técnico,170.09
+173,56,4,Analista,132.90
+174,56,8,Líder Técnico,58.29
+175,57,1,Analista,24.27
+176,57,4,Apoio Técnico,56.05
+177,57,6,Apoio Técnico,236.96
+178,57,10,Analista,219.68
+179,58,5,Analista,105.61
+180,58,9,Apoio Técnico,69.92
+181,59,1,Analista,85.89
+182,59,2,Desenvolvedor,110.10
+183,59,10,Apoio Técnico,140.10
+184,60,1,Analista,122.49
+185,60,3,Líder Técnico,32.90
+186,60,10,Líder Técnico,165.40
+187,61,3,Líder Técnico,212.15
+188,61,6,Apoio Técnico,98.11
+189,61,8,Desenvolvedor,84.54
+190,62,9,Analista,35.43
+191,62,10,Líder Técnico,65.58
+192,63,1,Analista,112.62
+193,63,5,Analista,161.01
+194,63,7,Apoio Técnico,107.82
+195,63,8,Desenvolvedor,75.81
+196,64,1,Apoio Técnico,216.52
+197,64,8,Analista,42.51
+198,64,10,Desenvolvedor,149.78
+199,65,6,Desenvolvedor,111.96
+200,65,7,Desenvolvedor,210.45
+201,65,9,Desenvolvedor,122.47
+202,66,1,Apoio Técnico,176.14
+203,66,6,Desenvolvedor,220.61
+204,67,1,Apoio Técnico,171.34
+205,67,4,Desenvolvedor,86.12
+206,67,10,Desenvolvedor,57.27
+207,68,1,Apoio Técnico,97.94
+208,68,3,Apoio Técnico,26.58
+209,68,7,Apoio Técnico,145.67
+210,69,1,Líder Técnico,69.75
+211,69,5,Líder Técnico,202.09
+212,69,10,Analista,110.98
+213,70,2,Líder Técnico,96.64
+214,70,4,Líder Técnico,95.23
+215,70,7,Apoio Técnico,118.02
+216,70,9,Apoio Técnico,176.93
+217,71,4,Apoio Técnico,187.81
+218,71,9,Líder Técnico,27.27
+219,72,1,Analista,159.85
+220,72,3,Apoio Técnico,126.50
+221,72,5,Líder Técnico,223.67
+222,72,8,Analista,158.72
+223,73,4,Desenvolvedor,131.16
+224,73,5,Apoio Técnico,63.70
+225,73,8,Apoio Técnico,88.15
+226,74,1,Líder Técnico,100.92
+227,74,5,Desenvolvedor,66.82
+228,74,9,Líder Técnico,38.01
+229,75,6,Desenvolvedor,47.55
+230,75,10,Desenvolvedor,108.55
+231,76,1,Desenvolvedor,164.15
+232,76,6,Analista,212.97
+233,76,7,Analista,161.38
+234,76,10,Analista,163.33
+235,77,1,Apoio Técnico,48.68
+236,77,5,Líder Técnico,129.85
+237,77,7,Analista,92.09
+238,77,10,Analista,140.32
+239,78,1,Desenvolvedor,180.21
+240,78,2,Analista,72.27
+241,78,3,Desenvolvedor,60.56
+242,78,4,Líder Técnico,204.31
+243,79,3,Analista,192.27
+244,79,5,Apoio Técnico,87.05
+245,79,8,Analista,106.09
+246,79,9,Desenvolvedor,82.51
+247,80,5,Líder Técnico,160.09
+248,80,6,Desenvolvedor,78.80
+249,80,7,Desenvolvedor,141.54
+250,80,8,Apoio Técnico,130.54
+251,81,1,Líder Técnico,47.38
+252,81,2,Analista,194.65
+253,81,7,Apoio Técnico,203.26
+254,82,1,Analista,157.50
+255,82,2,Desenvolvedor,119.09
+256,82,4,Apoio Técnico,63.14
+257,82,9,Analista,51.76
+258,83,2,Apoio Técnico,237.19
+259,83,3,Apoio Técnico,29.89
+260,83,7,Líder Técnico,139.85
+261,84,1,Desenvolvedor,31.22
+262,84,5,Apoio Técnico,70.74
+263,84,7,Líder Técnico,36.44
+264,84,10,Desenvolvedor,27.92
+265,85,5,Apoio Técnico,146.70
+266,85,7,Desenvolvedor,232.74
+267,85,9,Analista,135.63
+268,85,10,Apoio Técnico,111.65
+269,86,6,Analista,76.52
+270,86,10,Analista,186.11
+271,87,2,Analista,149.63
+272,87,3,Analista,73.61
+273,88,6,Desenvolvedor,96.26
+274,88,9,Desenvolvedor,104.15
+275,89,3,Apoio Técnico,130.75
+276,89,5,Desenvolvedor,237.07
+277,89,6,Apoio Técnico,26.20
+278,90,1,Desenvolvedor,119.45
+279,90,3,Líder Técnico,205.35
+280,91,6,Apoio Técnico,111.90
+281,91,7,Analista,165.50
+282,92,5,Líder Técnico,149.96
+283,92,7,Desenvolvedor,53.05
+284,92,8,Apoio Técnico,209.17
+285,93,2,Desenvolvedor,47.52
+286,93,7,Líder Técnico,155.07
+287,93,10,Líder Técnico,192.88
+288,94,1,Apoio Técnico,142.02
+289,94,5,Líder Técnico,138.31
+290,95,5,Apoio Técnico,185.57
+291,95,8,Apoio Técnico,147.21
+292,96,3,Desenvolvedor,55.38
+293,96,5,Analista,156.39
+294,96,8,Analista,235.49
+295,97,1,Líder Técnico,46.33
+296,97,2,Desenvolvedor,148.78
+297,97,4,Apoio Técnico,211.14
+298,97,8,Analista,25.35
+299,98,1,Apoio Técnico,236.45
+300,98,6,Líder Técnico,96.30
+301,99,3,Desenvolvedor,164.33
+302,99,8,Líder Técnico,178.93
+303,99,10,Desenvolvedor,191.30
+304,100,1,Apoio Técnico,162.39
+305,100,4,Analista,150.40
+306,100,6,Líder Técnico,145.03
+307,101,2,Líder Técnico,224.48
+308,101,7,Líder Técnico,173.76
+309,101,9,Líder Técnico,70.85
+310,101,10,Analista,192.75
+311,102,2,Desenvolvedor,92.91
+312,102,5,Analista,139.78
+313,102,7,Analista,170.85
+314,103,3,Apoio Técnico,37.37
+315,103,7,Líder Técnico,34.60
+316,103,8,Desenvolvedor,122.29
+317,104,4,Desenvolvedor,36.11
+318,104,5,Desenvolvedor,124.76
+319,104,9,Analista,61.43
+320,104,10,Líder Técnico,62.91
+321,105,2,Apoio Técnico,208.14
+322,105,6,Desenvolvedor,211.48
+323,106,7,Apoio Técnico,31.52
+324,106,8,Líder Técnico,188.10
+325,107,2,Desenvolvedor,111.10
+326,107,9,Desenvolvedor,178.69
+327,108,2,Líder Técnico,234.12
+328,108,3,Desenvolvedor,218.85
+329,108,5,Analista,102.23
+330,109,1,Líder Técnico,107.26
+331,109,3,Líder Técnico,201.04
+332,109,8,Analista,147.60
+333,109,10,Apoio Técnico,178.19
+334,110,2,Apoio Técnico,152.26
+335,110,5,Analista,156.57
+336,111,1,Desenvolvedor,72.65
+337,111,5,Líder Técnico,149.62
+338,111,8,Apoio Técnico,142.44
+339,112,5,Apoio Técnico,57.53
+340,112,6,Analista,149.16
+341,112,8,Analista,85.04
+342,113,2,Líder Técnico,111.48
+343,113,5,Desenvolvedor,229.67
+344,113,7,Líder Técnico,190.44
+345,113,9,Apoio Técnico,147.08
+346,114,1,Líder Técnico,129.92
+347,114,9,Desenvolvedor,201.59
+348,114,10,Analista,144.81
+349,115,6,Analista,33.25
+350,115,8,Desenvolvedor,86.20
+351,115,9,Analista,86.03
+352,116,1,Desenvolvedor,229.66
+353,116,4,Apoio Técnico,122.72
+354,116,6,Analista,26.52
+355,117,3,Líder Técnico,48.33
+356,117,8,Desenvolvedor,24.65
+357,117,9,Apoio Técnico,79.63
+358,117,10,Líder Técnico,233.93
+359,118,3,Analista,170.91
+360,118,8,Apoio Técnico,42.30
+361,119,5,Analista,104.78
+362,119,7,Líder Técnico,147.77
+363,119,8,Líder Técnico,42.17
+364,120,3,Apoio Técnico,121.87
+365,120,5,Analista,136.23
+366,120,6,Apoio Técnico,65.06
+367,120,9,Apoio Técnico,26.29
+368,121,2,Analista,213.99
+369,121,7,Líder Técnico,40.16
+370,121,10,Líder Técnico,53.52
+371,122,2,Apoio Técnico,221.88
+372,122,7,Desenvolvedor,184.90
+373,123,5,Desenvolvedor,171.34
+374,123,8,Líder Técnico,134.12
+375,124,5,Desenvolvedor,218.88
+376,124,8,Líder Técnico,50.06
+377,125,2,Apoio Técnico,186.35
+378,125,3,Desenvolvedor,138.63
+379,125,10,Apoio Técnico,176.66
+380,126,2,Apoio Técnico,233.02
+381,126,7,Líder Técnico,202.91
+382,126,8,Desenvolvedor,131.31
+383,127,1,Apoio Técnico,169.08
+384,127,2,Desenvolvedor,149.75
+385,127,6,Líder Técnico,67.62
+386,127,7,Apoio Técnico,222.10
+387,128,2,Desenvolvedor,56.72
+388,128,3,Líder Técnico,196.57
+389,129,1,Apoio Técnico,230.39
+390,129,7,Líder Técnico,222.48
+391,129,8,Líder Técnico,181.69
+392,129,10,Apoio Técnico,192.28
+393,130,1,Analista,165.52
+394,130,2,Apoio Técnico,65.27
+395,130,4,Líder Técnico,83.49
+396,130,6,Desenvolvedor,147.91
+397,131,1,Líder Técnico,38.45
+398,131,4,Líder Técnico,122.42
+399,132,4,Apoio Técnico,42.98
+400,132,6,Desenvolvedor,225.41
+401,132,8,Analista,28.78
+402,132,9,Apoio Técnico,236.58
+403,133,2,Líder Técnico,146.23
+404,133,6,Desenvolvedor,194.99
+405,133,7,Apoio Técnico,174.26
+406,134,1,Apoio Técnico,176.11
+407,134,10,Líder Técnico,34.13
+408,135,7,Líder Técnico,52.70
+409,135,9,Analista,117.50
+410,135,10,Desenvolvedor,72.86
+411,136,1,Apoio Técnico,52.98
+412,136,3,Desenvolvedor,219.86
+413,137,3,Apoio Técnico,92.81
+414,137,9,Analista,105.42
+415,138,2,Apoio Técnico,119.71
+416,138,4,Desenvolvedor,148.10
+417,138,5,Analista,147.26
+418,138,7,Desenvolvedor,70.45
+419,139,1,Apoio Técnico,72.44
+420,139,3,Desenvolvedor,76.27
+421,139,5,Líder Técnico,146.06
+422,140,3,Apoio Técnico,72.53
+423,140,4,Analista,90.45
+424,140,5,Analista,185.01
+425,140,7,Analista,99.73
+426,141,9,Apoio Técnico,101.79
+427,141,10,Líder Técnico,80.33
+428,142,2,Apoio Técnico,61.22
+429,142,6,Apoio Técnico,197.40
+430,142,7,Desenvolvedor,73.68
+431,143,2,Desenvolvedor,76.50
+432,143,3,Apoio Técnico,122.52
+433,143,4,Analista,150.12
+434,143,9,Desenvolvedor,154.27
+435,144,2,Líder Técnico,70.26
+436,144,3,Líder Técnico,237.57
+437,144,6,Líder Técnico,88.12
+438,144,9,Analista,143.13
+439,145,1,Desenvolvedor,195.42
+440,145,4,Apoio Técnico,66.28
+441,146,4,Desenvolvedor,56.40
+442,146,8,Apoio Técnico,192.96
+443,146,9,Analista,214.79
+444,147,2,Apoio Técnico,103.79
+445,147,7,Desenvolvedor,99.36
+446,147,10,Apoio Técnico,159.72
+447,148,2,Analista,48.13
+448,148,3,Apoio Técnico,42.46
+449,148,5,Analista,178.05
+450,148,6,Desenvolvedor,160.41
+451,149,1,Líder Técnico,125.04
+452,149,2,Apoio Técnico,95.68
+453,149,5,Analista,169.98
+454,150,7,Desenvolvedor,93.11
+455,150,9,Líder Técnico,123.48
+456,151,4,Analista,207.25
+457,151,8,Líder Técnico,42.12
+458,152,5,Apoio Técnico,210.17
+459,152,7,Líder Técnico,222.24
+460,153,3,Analista,176.63
+461,153,4,Desenvolvedor,24.74
+462,154,3,Analista,38.93
+463,154,6,Analista,218.65
+464,154,8,Líder Técnico,134.63
+465,155,6,Apoio Técnico,135.18
+466,155,8,Analista,55.40
+467,155,9,Desenvolvedor,157.61
+468,156,2,Analista,60.98
+469,156,3,Desenvolvedor,64.16
+470,156,4,Desenvolvedor,221.93
+471,157,1,Líder Técnico,67.50
+472,157,4,Apoio Técnico,54.26
+473,157,6,Apoio Técnico,125.93
+474,158,5,Desenvolvedor,197.25
+475,158,6,Desenvolvedor,86.97
+476,159,6,Analista,150.45
+477,159,7,Apoio Técnico,24.53
+478,159,9,Líder Técnico,105.31
+479,159,10,Apoio Técnico,126.20
+480,160,3,Desenvolvedor,221.61
+481,160,8,Líder Técnico,78.18
+482,161,3,Analista,149.67
+483,161,6,Apoio Técnico,104.22
+484,161,8,Apoio Técnico,55.47
+485,162,4,Apoio Técnico,84.01
+486,162,8,Apoio Técnico,154.50
+487,163,3,Analista,203.44
+488,163,6,Apoio Técnico,61.12
+489,164,3,Analista,185.83
+490,164,5,Desenvolvedor,92.40
+491,164,6,Desenvolvedor,136.58
+492,164,10,Líder Técnico,155.18
+493,165,2,Líder Técnico,98.86
+494,165,7,Analista,170.47
+495,166,8,Líder Técnico,97.34
+496,166,10,Apoio Técnico,96.74
+497,167,2,Líder Técnico,52.48
+498,167,5,Líder Técnico,200.68
+499,167,8,Analista,108.66
+500,168,4,Apoio Técnico,213.68
+501,168,5,Desenvolvedor,58.59
+502,168,7,Apoio Técnico,171.38
+503,168,10,Desenvolvedor,206.38
+504,169,1,Desenvolvedor,61.34
+505,169,3,Apoio Técnico,109.39
+506,169,8,Apoio Técnico,107.91
+507,170,2,Apoio Técnico,166.91
+508,170,4,Analista,192.69
+509,170,7,Analista,185.08
+510,170,10,Desenvolvedor,135.30
+511,171,2,Desenvolvedor,104.75
+512,171,3,Desenvolvedor,85.17
+513,171,7,Desenvolvedor,207.03
+514,171,8,Apoio Técnico,129.77
+515,172,6,Desenvolvedor,104.46
+516,172,7,Analista,218.86
+517,173,3,Líder Técnico,187.07
+518,173,5,Desenvolvedor,107.04
+519,173,6,Analista,129.63
+520,173,9,Analista,86.83
+521,174,3,Líder Técnico,209.25
+522,174,4,Analista,203.27
+523,174,5,Apoio Técnico,225.73
+524,174,7,Desenvolvedor,103.52
+525,175,3,Apoio Técnico,165.76
+526,175,8,Analista,140.38
+527,175,9,Analista,126.13
+528,175,10,Desenvolvedor,179.85
+529,176,4,Apoio Técnico,60.67
+530,176,6,Apoio Técnico,101.59
+531,176,8,Apoio Técnico,144.17
+532,176,9,Desenvolvedor,163.96
+533,177,1,Apoio Técnico,88.64
+534,177,2,Líder Técnico,176.19
+535,177,6,Apoio Técnico,34.77
+536,178,2,Analista,148.61
+537,178,6,Líder Técnico,89.94
+538,178,7,Líder Técnico,91.17
+539,178,10,Analista,176.58
+540,179,1,Líder Técnico,190.45
+541,179,10,Analista,200.65
+542,180,5,Desenvolvedor,98.82
+543,180,6,Apoio Técnico,236.72
+544,180,8,Desenvolvedor,122.58
+545,181,2,Apoio Técnico,43.06
+546,181,8,Líder Técnico,91.77
+547,181,9,Desenvolvedor,92.18
+548,182,6,Desenvolvedor,58.67
+549,182,7,Apoio Técnico,73.47
+550,182,9,Líder Técnico,46.61
+551,183,1,Analista,176.82
+552,183,3,Líder Técnico,26.79
+553,183,9,Analista,201.40
+554,184,8,Analista,50.57
+555,184,9,Desenvolvedor,26.27
+556,184,10,Líder Técnico,149.31
+557,185,7,Desenvolvedor,204.46
+558,185,10,Desenvolvedor,70.75
+559,186,2,Líder Técnico,232.05
+560,186,9,Analista,218.12
+561,187,3,Líder Técnico,142.44
+562,187,4,Desenvolvedor,118.73
+563,187,7,Desenvolvedor,194.71
+564,188,1,Apoio Técnico,159.16
+565,188,2,Apoio Técnico,128.17
+566,188,8,Apoio Técnico,39.81
+567,188,10,Desenvolvedor,189.94
+568,189,1,Líder Técnico,159.16
+569,189,2,Apoio Técnico,32.40
+570,189,8,Desenvolvedor,24.71
+571,190,7,Desenvolvedor,199.90
+572,190,9,Analista,196.20
+573,191,4,Analista,179.98
+574,191,5,Líder Técnico,202.39
+575,191,7,Líder Técnico,129.20
+576,191,9,Apoio Técnico,173.79
+577,192,1,Desenvolvedor,115.01
+578,192,10,Desenvolvedor,168.16
+579,193,3,Líder Técnico,144.09
+580,193,9,Apoio Técnico,59.23
+581,194,1,Apoio Técnico,227.59
+582,194,2,Apoio Técnico,59.95
+583,194,4,Apoio Técnico,174.62
+584,194,7,Líder Técnico,115.95
+585,195,5,Desenvolvedor,69.58
+586,195,7,Líder Técnico,198.80
+587,195,8,Analista,86.45
+588,195,9,Líder Técnico,96.27
+589,196,5,Apoio Técnico,191.07
+590,196,8,Apoio Técnico,235.95
+591,196,9,Líder Técnico,161.52
+592,197,1,Apoio Técnico,188.25
+593,197,2,Líder Técnico,36.72
+594,197,6,Apoio Técnico,82.74
+595,197,8,Apoio Técnico,61.32
+596,198,3,Analista,88.33
+597,198,7,Desenvolvedor,87.26
+598,198,9,Desenvolvedor,35.77
+599,198,10,Líder Técnico,70.84
+600,199,3,Desenvolvedor,153.50
+601,199,4,Apoio Técnico,129.40
+602,199,5,Apoio Técnico,216.22
+603,199,8,Analista,65.60
+604,200,2,Desenvolvedor,153.16
+605,200,7,Apoio Técnico,177.78
+606,201,1,Desenvolvedor,28.71
+607,201,4,Líder Técnico,67.59
+608,201,9,Apoio Técnico,202.62
+609,202,2,Líder Técnico,228.33
+610,202,3,Apoio Técnico,66.82
+611,202,7,Líder Técnico,146.43
+612,203,3,Líder Técnico,78.68
+613,203,5,Apoio Técnico,194.67
+614,203,6,Líder Técnico,51.92
+615,203,9,Líder Técnico,125.16
+616,204,3,Desenvolvedor,65.68
+617,204,5,Líder Técnico,156.84
+618,204,6,Desenvolvedor,178.16
+619,205,1,Apoio Técnico,77.11
+620,205,2,Apoio Técnico,187.19
+621,205,4,Desenvolvedor,223.11
+622,205,8,Líder Técnico,173.82
+623,206,4,Analista,177.93
+624,206,5,Analista,56.06
+625,206,10,Analista,179.41
+626,207,3,Analista,124.83
+627,207,5,Líder Técnico,198.97
+628,208,2,Desenvolvedor,143.64
+629,208,6,Analista,219.20
+630,208,7,Apoio Técnico,38.74
+631,208,9,Analista,144.13
+632,209,3,Analista,130.12
+633,209,6,Apoio Técnico,103.11
+634,209,7,Líder Técnico,54.82
+635,210,2,Analista,102.04
+636,210,4,Analista,35.87
+637,210,8,Apoio Técnico,121.90
+638,210,9,Apoio Técnico,166.25
+639,211,3,Desenvolvedor,117.77
+640,211,5,Líder Técnico,143.67
+641,211,9,Líder Técnico,42.21
+642,212,3,Desenvolvedor,26.86
+643,212,5,Analista,175.35
+644,212,7,Apoio Técnico,197.33
+645,212,9,Desenvolvedor,192.18
+646,213,3,Analista,118.36
+647,213,6,Líder Técnico,188.74
+648,214,4,Líder Técnico,114.58
+649,214,5,Apoio Técnico,124.16
+650,214,6,Analista,223.19
+651,214,9,Analista,39.62
+652,215,2,Líder Técnico,87.49
+653,215,4,Desenvolvedor,226.35
+654,215,6,Apoio Técnico,227.90
+655,215,8,Desenvolvedor,212.35
+656,216,5,Apoio Técnico,133.26
+657,216,6,Analista,33.83
+658,217,1,Analista,82.56
+659,217,2,Apoio Técnico,30.42
+660,217,4,Apoio Técnico,224.95
+661,217,7,Analista,197.86
+662,218,5,Desenvolvedor,222.69
+663,218,6,Líder Técnico,171.36
+664,218,10,Analista,138.49
+665,219,5,Desenvolvedor,212.48
+666,219,10,Apoio Técnico,35.36
+667,220,1,Líder Técnico,50.46
+668,220,7,Apoio Técnico,132.06

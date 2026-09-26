@@ -1,0 +1,221 @@
+projeto_id,nome,data_inicio,data_conclusao,complexidade,tipo,status
+1,Projeto 001,2021-05-10,2021-07-22,Média,Integração,Concluído
+2,Projeto 002,2021-01-16,2021-02-09,Baixa,Projeto interno,Concluído
+3,Projeto 003,2021-01-20,2021-02-15,Média,Projeto interno,Concluído
+4,Projeto 004,2021-11-13,2021-12-23,Baixa,Projeto interno,Concluído
+5,Projeto 005,2021-04-29,2021-07-12,Baixa,Melhoria,Concluído
+6,Projeto 006,2021-09-05,2021-12-06,Baixa,Melhoria,Concluído
+7,Projeto 007,2021-08-11,2021-11-23,Alta,Integração,Concluído
+8,Projeto 008,2021-10-11,2021-11-20,Baixa,Projeto de cliente,Concluído
+9,Projeto 009,2021-01-14,2021-02-26,Alta,Melhoria,Concluído
+10,Projeto 010,2021-01-08,2021-05-01,Alta,Projeto interno,Concluído
+11,Projeto 011,2021-04-13,2021-06-05,Baixa,Melhoria,Concluído
+12,Projeto 012,2021-02-15,2021-06-12,Média,Melhoria,Concluído
+13,Projeto 013,2021-04-14,2021-05-29,Média,Projeto interno,Concluído
+14,Projeto 014,2021-10-17,2021-11-21,Média,Melhoria,Concluído
+15,Projeto 015,2021-05-14,2021-05-29,Alta,Melhoria,Concluído
+16,Projeto 016,2021-01-02,2021-01-21,Média,Projeto de cliente,Concluído
+17,Projeto 017,2021-06-19,2021-07-19,Baixa,Projeto interno,Concluído
+18,Projeto 018,2021-08-29,2021-10-10,Baixa,Melhoria,Concluído
+19,Projeto 019,2021-01-12,2021-03-17,Baixa,Projeto interno,Concluído
+20,Projeto 020,2021-09-07,2021-10-12,Baixa,Integração,Concluído
+21,Projeto 021,2021-08-28,2021-10-29,Alta,Melhoria,Concluído
+22,Projeto 022,2021-01-06,2021-01-23,Alta,Melhoria,Concluído
+23,Projeto 023,2021-07-05,2021-08-03,Média,Integração,Concluído
+24,Projeto 024,2021-02-12,2021-03-31,Baixa,Integração,Concluído
+25,Projeto 025,2021-01-02,2021-01-23,Baixa,Melhoria,Concluído
+26,Projeto 026,2021-09-25,2021-11-16,Alta,Integração,Concluído
+27,Projeto 027,2021-01-08,2021-04-25,Média,Melhoria,Concluído
+28,Projeto 028,2021-03-01,2021-03-16,Alta,Projeto de cliente,Concluído
+29,Projeto 029,2021-08-08,2021-09-10,Baixa,Projeto interno,Concluído
+30,Projeto 030,2021-01-10,2021-02-16,Média,Melhoria,Concluído
+31,Projeto 031,2021-04-19,2021-05-11,Média,Integração,Concluído
+32,Projeto 032,2021-01-20,2021-02-21,Média,Projeto interno,Concluído
+33,Projeto 033,2021-02-08,2021-05-12,Baixa,Projeto interno,Concluído
+34,Projeto 034,2021-01-14,2021-02-06,Média,Projeto interno,Concluído
+35,Projeto 035,2021-01-27,2021-04-05,Alta,Projeto interno,Concluído
+36,Projeto 036,2021-10-28,2021-12-14,Média,Projeto interno,Concluído
+37,Projeto 037,2022-08-10,2022-09-03,Média,Projeto interno,Concluído
+38,Projeto 038,2022-02-19,2022-03-12,Alta,Integração,Concluído
+39,Projeto 039,2022-01-02,2022-01-23,Alta,Melhoria,Concluído
+40,Projeto 040,2022-01-05,2022-01-25,Baixa,Projeto de cliente,Concluído
+41,Projeto 041,2022-04-13,2022-06-04,Baixa,Projeto de cliente,Concluído
+42,Projeto 042,2022-02-24,2022-03-26,Média,Integração,Concluído
+43,Projeto 043,2022-06-05,2022-06-23,Média,Integração,Concluído
+44,Projeto 044,2022-10-16,2022-11-10,Alta,Melhoria,Concluído
+45,Projeto 045,2022-01-01,2022-01-17,Baixa,Melhoria,Concluído
+46,Projeto 046,2022-01-16,2022-03-28,Baixa,Projeto interno,Concluído
+47,Projeto 047,2022-04-09,2022-06-25,Alta,Projeto de cliente,Concluído
+48,Projeto 048,2022-01-03,2022-01-20,Alta,Projeto de cliente,Concluído
+49,Projeto 049,2022-03-16,2022-06-09,Baixa,Melhoria,Concluído
+50,Projeto 050,2022-04-22,2022-07-14,Alta,Melhoria,Concluído
+51,Projeto 051,2022-02-05,2022-04-18,Baixa,Melhoria,Concluído
+52,Projeto 052,2022-01-24,2022-03-28,Média,Melhoria,Concluído
+53,Projeto 053,2022-01-24,2022-02-11,Baixa,Projeto interno,Concluído
+54,Projeto 054,2022-06-19,2022-09-10,Alta,Integração,Concluído
+55,Projeto 055,2022-12-13,2022-12-29,Alta,Melhoria,Concluído
+56,Projeto 056,2022-08-25,2022-12-11,Baixa,Melhoria,Concluído
+57,Projeto 057,2022-01-30,2022-05-11,Média,Integração,Concluído
+58,Projeto 058,2022-01-31,2022-02-18,Média,Projeto interno,Concluído
+59,Projeto 059,2022-04-11,2022-07-22,Alta,Integração,Concluído
+60,Projeto 060,2022-04-30,2022-06-12,Alta,Projeto interno,Concluído
+61,Projeto 061,2022-02-28,2022-05-10,Baixa,Melhoria,Concluído
+62,Projeto 062,2022-02-18,2022-03-07,Alta,Projeto de cliente,Concluído
+63,Projeto 063,2022-07-14,2022-08-10,Média,Projeto de cliente,Concluído
+64,Projeto 064,2022-08-08,2022-11-13,Baixa,Projeto interno,Concluído
+65,Projeto 065,2022-04-14,2022-05-28,Baixa,Projeto interno,Concluído
+66,Projeto 066,2022-08-26,2022-11-26,Alta,Projeto interno,Concluído
+67,Projeto 067,2022-01-30,2022-04-01,Média,Melhoria,Concluído
+68,Projeto 068,2022-12-01,2022-12-16,Baixa,Projeto interno,Concluído
+69,Projeto 069,2022-06-18,2022-07-03,Alta,Projeto de cliente,Concluído
+70,Projeto 070,2022-05-12,2022-09-04,Alta,Projeto interno,Concluído
+71,Projeto 071,2022-10-06,2022-11-17,Alta,Projeto de cliente,Concluído
+72,Projeto 072,2022-02-23,2022-05-20,Baixa,Projeto interno,Concluído
+73,Projeto 073,2023-08-18,2023-10-09,Alta,Melhoria,Concluído
+74,Projeto 074,2023-06-01,2023-09-08,Baixa,Projeto interno,Concluído
+75,Projeto 075,2023-08-22,2023-09-23,Média,Integração,Concluído
+76,Projeto 076,2023-08-16,2023-09-21,Baixa,Projeto de cliente,Concluído
+77,Projeto 077,2023-05-31,2023-08-28,Média,Projeto de cliente,Concluído
+78,Projeto 078,2023-08-15,2023-09-24,Média,Projeto de cliente,Concluído
+79,Projeto 079,2023-01-12,2023-02-28,Baixa,Integração,Concluído
+80,Projeto 080,2023-01-30,2023-03-02,Alta,Projeto de cliente,Concluído
+81,Projeto 081,2023-02-21,2023-03-10,Baixa,Projeto de cliente,Concluído
+82,Projeto 082,2023-09-29,2023-10-27,Média,Projeto interno,Concluído
+83,Projeto 083,2023-08-25,2023-10-22,Alta,Projeto de cliente,Concluído
+84,Projeto 084,2023-01-28,2023-04-04,Baixa,Projeto de cliente,Concluído
+85,Projeto 085,2023-09-06,2023-11-11,Baixa,Melhoria,Concluído
+86,Projeto 086,2023-03-22,2023-06-06,Baixa,Projeto interno,Concluído
+87,Projeto 087,2023-05-18,2023-07-29,Baixa,Integração,Concluído
+88,Projeto 088,2023-08-11,2023-09-29,Baixa,Integração,Concluído
+89,Projeto 089,2023-02-01,2023-05-23,Média,Projeto interno,Concluído
+90,Projeto 090,2023-01-01,2023-03-26,Baixa,Integração,Concluído
+91,Projeto 091,2023-03-19,2023-06-10,Baixa,Projeto de cliente,Concluído
+92,Projeto 092,2023-04-03,2023-07-15,Alta,Projeto interno,Concluído
+93,Projeto 093,2023-04-25,2023-08-04,Média,Melhoria,Concluído
+94,Projeto 094,2023-03-17,2023-04-01,Alta,Projeto interno,Concluído
+95,Projeto 095,2023-03-20,2023-06-10,Média,Melhoria,Concluído
+96,Projeto 096,2023-01-12,2023-03-07,Baixa,Melhoria,Concluído
+97,Projeto 097,2023-06-20,2023-09-29,Baixa,Melhoria,Concluído
+98,Projeto 098,2023-01-12,2023-04-01,Baixa,Projeto de cliente,Concluído
+99,Projeto 099,2023-04-04,2023-07-12,Alta,Projeto de cliente,Concluído
+100,Projeto 100,2023-05-10,2023-07-01,Alta,Melhoria,Concluído
+101,Projeto 101,2023-08-21,2023-10-12,Média,Integração,Concluído
+102,Projeto 102,2023-02-14,2023-04-22,Alta,Projeto interno,Concluído
+103,Projeto 103,2023-11-10,2023-12-03,Média,Projeto interno,Concluído
+104,Projeto 104,2023-02-13,2023-03-25,Baixa,Melhoria,Concluído
+105,Projeto 105,2023-04-23,2023-08-10,Alta,Projeto interno,Concluído
+106,Projeto 106,2023-08-25,2023-12-07,Média,Projeto de cliente,Concluído
+107,Projeto 107,2023-07-24,2023-08-15,Baixa,Projeto de cliente,Concluído
+108,Projeto 108,2023-07-31,2023-08-26,Alta,Projeto interno,Concluído
+109,Projeto 109,2024-07-17,2024-08-12,Alta,Melhoria,Concluído
+110,Projeto 110,2024-05-05,2024-07-20,Baixa,Integração,Concluído
+111,Projeto 111,2024-05-18,2024-09-13,Alta,Projeto interno,Concluído
+112,Projeto 112,2024-01-02,2024-01-19,Alta,Projeto interno,Concluído
+113,Projeto 113,2024-04-25,2024-05-14,Baixa,Melhoria,Concluído
+114,Projeto 114,2024-05-31,2024-08-25,Média,Melhoria,Concluído
+115,Projeto 115,2024-04-01,2024-05-07,Média,Melhoria,Concluído
+116,Projeto 116,2024-04-17,2024-06-10,Alta,Projeto de cliente,Concluído
+117,Projeto 117,2024-01-18,2024-05-05,Alta,Melhoria,Concluído
+118,Projeto 118,2024-10-26,2024-11-21,Alta,Projeto interno,Concluído
+119,Projeto 119,2024-09-16,2024-12-17,Alta,Integração,Concluído
+120,Projeto 120,2024-10-11,2024-11-22,Baixa,Projeto de cliente,Concluído
+121,Projeto 121,2024-08-04,2024-10-25,Baixa,Integração,Concluído
+122,Projeto 122,2024-06-21,2024-08-01,Média,Integração,Concluído
+123,Projeto 123,2024-04-15,2024-08-11,Média,Integração,Concluído
+124,Projeto 124,2024-08-16,2024-09-12,Média,Projeto interno,Concluído
+125,Projeto 125,2024-06-28,2024-08-01,Alta,Integração,Concluído
+126,Projeto 126,2024-11-08,2024-11-27,Média,Integração,Concluído
+127,Projeto 127,2024-07-17,2024-09-17,Média,Projeto de cliente,Concluído
+128,Projeto 128,2024-01-29,2024-02-19,Média,Projeto de cliente,Concluído
+129,Projeto 129,2024-06-13,2024-07-28,Média,Integração,Concluído
+130,Projeto 130,2024-07-15,2024-08-23,Alta,Projeto interno,Concluído
+131,Projeto 131,2024-04-23,2024-08-19,Alta,Melhoria,Concluído
+132,Projeto 132,2024-03-07,2024-05-22,Média,Melhoria,Concluído
+133,Projeto 133,2024-06-27,2024-10-19,Alta,Projeto de cliente,Concluído
+134,Projeto 134,2024-02-15,2024-05-03,Baixa,Projeto interno,Concluído
+135,Projeto 135,2024-03-13,2024-05-28,Média,Integração,Concluído
+136,Projeto 136,2024-02-14,2024-03-03,Baixa,Melhoria,Concluído
+137,Projeto 137,2024-02-29,2024-04-01,Baixa,Projeto interno,Concluído
+138,Projeto 138,2024-01-09,2024-02-01,Alta,Projeto de cliente,Concluído
+139,Projeto 139,2024-10-25,2024-11-30,Média,Projeto interno,Concluído
+140,Projeto 140,2024-10-10,2024-12-25,Alta,Melhoria,Concluído
+141,Projeto 141,2024-08-19,2024-09-03,Alta,Projeto de cliente,Concluído
+142,Projeto 142,2024-02-20,2024-03-19,Baixa,Projeto interno,Concluído
+143,Projeto 143,2024-07-16,2024-10-22,Alta,Melhoria,Concluído
+144,Projeto 144,2024-01-30,2024-02-22,Alta,Projeto interno,Concluído
+145,Projeto 145,2025-10-22,2025-11-26,Média,Melhoria,Concluído
+146,Projeto 146,2025-09-08,2025-10-22,Média,Integração,Concluído
+147,Projeto 147,2025-09-19,2025-12-03,Alta,Projeto interno,Concluído
+148,Projeto 148,2025-01-07,2025-01-29,Alta,Projeto interno,Concluído
+149,Projeto 149,2025-04-17,2025-07-19,Média,Projeto de cliente,Concluído
+150,Projeto 150,2025-01-26,2025-02-22,Alta,Projeto de cliente,Concluído
+151,Projeto 151,2025-08-25,2025-11-03,Baixa,Projeto de cliente,Concluído
+152,Projeto 152,2025-07-13,2025-09-06,Média,Projeto de cliente,Concluído
+153,Projeto 153,2025-10-30,2025-12-25,Média,Melhoria,Concluído
+154,Projeto 154,2025-01-03,2025-02-03,Média,Projeto interno,Concluído
+155,Projeto 155,2025-04-07,2025-06-03,Baixa,Melhoria,Concluído
+156,Projeto 156,2025-07-10,2025-09-07,Média,Projeto interno,Concluído
+157,Projeto 157,2025-09-11,2025-11-30,Alta,Melhoria,Concluído
+158,Projeto 158,2025-01-20,2025-02-04,Baixa,Projeto interno,Concluído
+159,Projeto 159,2025-10-24,2025-11-14,Alta,Projeto interno,Concluído
+160,Projeto 160,2025-11-22,2025-12-24,Baixa,Integração,Concluído
+161,Projeto 161,2025-02-01,2025-02-24,Alta,Projeto interno,Concluído
+162,Projeto 162,2025-04-19,2025-05-28,Baixa,Integração,Concluído
+163,Projeto 163,2025-02-01,2025-04-28,Baixa,Projeto interno,Concluído
+164,Projeto 164,2025-10-29,2025-12-31,Baixa,Projeto interno,Concluído
+165,Projeto 165,2025-09-24,2025-10-16,Média,Projeto de cliente,Concluído
+166,Projeto 166,2025-05-16,2025-09-06,Alta,Projeto de cliente,Concluído
+167,Projeto 167,2025-01-04,2025-02-22,Baixa,Melhoria,Concluído
+168,Projeto 168,2025-08-28,2025-12-20,Alta,Integração,Concluído
+169,Projeto 169,2025-04-09,2025-04-28,Baixa,Projeto de cliente,Concluído
+170,Projeto 170,2025-08-12,2025-11-19,Média,Projeto interno,Concluído
+171,Projeto 171,2025-01-05,2025-03-19,Média,Integração,Concluído
+172,Projeto 172,2025-05-13,2025-08-19,Média,Integração,Concluído
+173,Projeto 173,2025-01-26,2025-05-16,Alta,Melhoria,Concluído
+174,Projeto 174,2025-04-23,2025-06-15,Média,Melhoria,Concluído
+175,Projeto 175,2025-10-10,2025-11-24,Média,Projeto de cliente,Concluído
+176,Projeto 176,2025-07-11,2025-07-30,Baixa,Projeto de cliente,Concluído
+177,Projeto 177,2025-01-19,2025-04-21,Alta,Projeto de cliente,Concluído
+178,Projeto 178,2025-11-02,2025-12-29,Alta,Projeto interno,Concluído
+179,Projeto 179,2025-08-02,2025-09-27,Baixa,Melhoria,Concluído
+180,Projeto 180,2025-08-06,2025-08-28,Média,Integração,Concluído
+181,Projeto 181,2026-01-28,2026-05-27,Baixa,Integração,Concluído
+182,Projeto 182,2026-03-27,2026-04-24,Baixa,Integração,Concluído
+183,Projeto 183,2026-04-17,2026-05-15,Média,Melhoria,Concluído
+184,Projeto 184,2026-01-04,2026-05-10,Baixa,Projeto de cliente,Concluído
+185,Projeto 185,2026-04-05,2026-06-07,Alta,Projeto de cliente,Concluído
+186,Projeto 186,2026-05-30,2026-06-22,Alta,Projeto interno,Concluído
+187,Projeto 187,2026-04-29,2026-06-14,Alta,Projeto interno,Concluído
+188,Projeto 188,2026-04-09,2026-06-15,Baixa,Integração,Concluído
+189,Projeto 189,2026-05-12,2026-05-30,Baixa,Projeto interno,Concluído
+190,Projeto 190,2026-03-12,2026-06-18,Média,Projeto interno,Concluído
+191,Projeto 191,2026-03-14,2026-04-15,Baixa,Melhoria,Concluído
+192,Projeto 192,2026-04-09,2026-06-30,Alta,Integração,Concluído
+193,Projeto 193,2026-05-05,2026-06-14,Baixa,Projeto de cliente,Concluído
+194,Projeto 194,2026-02-25,2026-05-17,Alta,Projeto interno,Concluído
+195,Projeto 195,2026-02-02,2026-05-02,Alta,Projeto interno,Concluído
+196,Projeto 196,2026-04-10,2026-06-17,Baixa,Projeto de cliente,Concluído
+197,Projeto 197,2026-02-25,2026-03-12,Média,Projeto de cliente,Concluído
+198,Projeto 198,2026-05-12,2026-05-29,Baixa,Projeto de cliente,Concluído
+199,Projeto 199,2026-05-29,2026-06-28,Média,Integração,Concluído
+200,Projeto 200,2026-03-19,2026-05-02,Alta,Projeto interno,Concluído
+201,Projeto 201,2026-03-16,2026-05-23,Média,Melhoria,Concluído
+202,Projeto 202,2026-04-06,2026-06-13,Baixa,Projeto de cliente,Concluído
+203,Projeto 203,2026-05-21,2026-06-21,Média,Melhoria,Concluído
+204,Projeto 204,2026-05-13,2026-06-17,Alta,Projeto interno,Concluído
+205,Projeto 205,2026-05-20,2026-06-16,Baixa,Melhoria,Concluído
+206,Projeto 206,2026-05-17,2026-06-20,Baixa,Melhoria,Concluído
+207,Projeto 207,2026-05-29,2026-06-27,Baixa,Projeto interno,Concluído
+208,Projeto 208,2026-02-25,2026-06-19,Média,Projeto de cliente,Concluído
+209,Projeto 209,2026-04-02,2026-06-08,Baixa,Melhoria,Concluído
+210,Projeto 210,2026-03-12,2026-05-20,Baixa,Projeto interno,Concluído
+211,Projeto 211,2026-01-20,,Alta,Integração,Em andamento
+212,Projeto 212,2026-06-17,,Alta,Melhoria,Em andamento
+213,Projeto 213,2026-06-13,,Média,Melhoria,Em andamento
+214,Projeto 214,2026-06-11,,Baixa,Integração,Em andamento
+215,Projeto 215,2026-01-07,,Alta,Projeto de cliente,Em andamento
+216,Projeto 216,2026-02-05,,Baixa,Projeto interno,Em andamento
+217,Projeto 217,2026-05-30,,Baixa,Projeto de cliente,Em andamento
+218,Projeto 218,2026-02-25,,Média,Projeto interno,Em andamento
+219,Projeto 219,2026-01-21,,Média,Projeto de cliente,Em andamento
+220,Projeto 220,2026-02-24,,Média,Integração,Em andamento

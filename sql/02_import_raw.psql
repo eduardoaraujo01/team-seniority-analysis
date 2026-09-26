@@ -1,0 +1,338 @@
+\set ON_ERROR_STOP on
+
+BEGIN;
+
+CREATE TEMP TABLE stg_profissionais (
+    profissional_id INTEGER,
+    nome TEXT,
+    data_admissao DATE,
+    status TEXT
+) ON COMMIT DROP;
+
+CREATE TEMP TABLE stg_historico_senioridade (
+    historico_id INTEGER,
+    profissional_id INTEGER,
+    senioridade TEXT,
+    data_inicio DATE,
+    data_fim DATE
+) ON COMMIT DROP;
+
+CREATE TEMP TABLE stg_projetos (
+    projeto_id INTEGER,
+    nome TEXT,
+    data_inicio DATE,
+    data_conclusao DATE,
+    complexidade TEXT,
+    tipo TEXT,
+    status TEXT
+) ON COMMIT DROP;
+
+CREATE TEMP TABLE stg_participacoes (
+    participacao_id INTEGER,
+    projeto_id INTEGER,
+    profissional_id INTEGER,
+    papel TEXT,
+    horas NUMERIC(8, 2)
+) ON COMMIT DROP;
+
+-- Execute o psql a partir da raiz do projeto para estes caminhos relativos funcionarem.
+\copy stg_profissionais (profissional_id, nome, data_admissao, status) FROM 'data/profissionais.csv' WITH (FORMAT csv, HEADER true, ENCODING 'UTF8')
+\copy stg_historico_senioridade (historico_id, profissional_id, senioridade, data_inicio, data_fim) FROM 'data/historico_senioridade.csv' WITH (FORMAT csv, HEADER true, ENCODING 'UTF8')
+\copy stg_projetos (projeto_id, nome, data_inicio, data_conclusao, complexidade, tipo, status) FROM 'data/projetos.csv' WITH (FORMAT csv, HEADER true, ENCODING 'UTF8')
+\copy stg_participacoes (participacao_id, projeto_id, profissional_id, papel, horas) FROM 'data/participacoes.csv' WITH (FORMAT csv, HEADER true, ENCODING 'UTF8')
+
+DO $validacao$
+DECLARE
+    ano INTEGER;
+BEGIN
+    -- Os CSVs gerados e revisados devem manter estas quantidades.
+    IF (SELECT COUNT(*) FROM stg_profissionais) <> 10 THEN
+        RAISE EXCEPTION 'profissionais.csv deve conter 10 registros.';
+    END IF;
+
+    IF (SELECT COUNT(*) FROM stg_historico_senioridade) <> 18 THEN
+        RAISE EXCEPTION 'historico_senioridade.csv deve conter 18 registros.';
+    END IF;
+
+    IF (SELECT COUNT(*) FROM stg_projetos) <> 220 THEN
+        RAISE EXCEPTION 'projetos.csv deve conter 220 registros.';
+    END IF;
+
+    IF (SELECT COUNT(*) FROM stg_participacoes) <> 668 THEN
+        RAISE EXCEPTION 'participacoes.csv deve conter 668 registros.';
+    END IF;
+
+    -- Não acrescenta dados a uma carga anterior nem sobrescreve tabelas preenchidas.
+    IF EXISTS (SELECT 1 FROM raw.profissionais)
+       OR EXISTS (SELECT 1 FROM raw.historico_senioridade)
+       OR EXISTS (SELECT 1 FROM raw.projetos)
+       OR EXISTS (SELECT 1 FROM raw.participacoes) THEN
+        RAISE EXCEPTION
+            'Há dados em pelo menos uma tabela raw. Interrompendo para evitar duplicação ou perda.';
+    END IF;
+
+    -- Campos obrigatórios e IDs únicos.
+    IF EXISTS (
+        SELECT 1
+        FROM stg_profissionais
+        WHERE profissional_id IS NULL
+           OR NULLIF(BTRIM(nome), '') IS NULL
+           OR data_admissao IS NULL
+           OR NULLIF(BTRIM(status), '') IS NULL
+    ) OR (
+        SELECT COUNT(*) FROM stg_profissionais
+    ) <> (
+        SELECT COUNT(DISTINCT profissional_id) FROM stg_profissionais
+    ) THEN
+        RAISE EXCEPTION 'Profissionais têm campos obrigatórios vazios ou IDs repetidos.';
+    END IF;
+
+    IF EXISTS (
+        SELECT 1
+        FROM stg_historico_senioridade
+        WHERE historico_id IS NULL
+           OR profissional_id IS NULL
+           OR NULLIF(BTRIM(senioridade), '') IS NULL
+           OR data_inicio IS NULL
+    ) OR (
+        SELECT COUNT(*) FROM stg_historico_senioridade
+    ) <> (
+        SELECT COUNT(DISTINCT historico_id) FROM stg_historico_senioridade
+    ) THEN
+        RAISE EXCEPTION 'Histórico tem campos obrigatórios vazios ou IDs repetidos.';
+    END IF;
+
+    IF EXISTS (
+        SELECT 1
+        FROM stg_projetos
+        WHERE projeto_id IS NULL
+           OR NULLIF(BTRIM(nome), '') IS NULL
+           OR data_inicio IS NULL
+           OR NULLIF(BTRIM(complexidade), '') IS NULL
+           OR NULLIF(BTRIM(tipo), '') IS NULL
+           OR NULLIF(BTRIM(status), '') IS NULL
+    ) OR (
+        SELECT COUNT(*) FROM stg_projetos
+    ) <> (
+        SELECT COUNT(DISTINCT projeto_id) FROM stg_projetos
+    ) THEN
+        RAISE EXCEPTION 'Projetos têm campos obrigatórios vazios ou IDs repetidos.';
+    END IF;
+
+    IF EXISTS (
+        SELECT 1
+        FROM stg_participacoes
+        WHERE participacao_id IS NULL
+           OR projeto_id IS NULL
+           OR profissional_id IS NULL
+           OR NULLIF(BTRIM(papel), '') IS NULL
+           OR horas IS NULL
+           OR horas <= 0
+    ) OR (
+        SELECT COUNT(*) FROM stg_participacoes
+    ) <> (
+        SELECT COUNT(DISTINCT participacao_id) FROM stg_participacoes
+    ) THEN
+        RAISE EXCEPTION 'Participações têm campos inválidos ou IDs repetidos.';
+    END IF;
+
+    -- A equipe definida para a análise não tem entradas ou saídas no período.
+    IF EXISTS (
+        SELECT 1
+        FROM stg_profissionais
+        WHERE data_admissao >= DATE '2021-01-01'
+           OR status <> 'Ativo'
+    ) THEN
+        RAISE EXCEPTION 'Equipe incompatível com a política aprovada de equipe estável.';
+    END IF;
+
+    -- Referências e unicidade de uma participação por profissional e projeto.
+    IF EXISTS (
+        SELECT 1
+        FROM stg_historico_senioridade h
+        LEFT JOIN stg_profissionais p
+            ON p.profissional_id = h.profissional_id
+        WHERE p.profissional_id IS NULL
+    ) OR EXISTS (
+        SELECT 1
+        FROM stg_participacoes pa
+        LEFT JOIN stg_profissionais p
+            ON p.profissional_id = pa.profissional_id
+        LEFT JOIN stg_projetos pr
+            ON pr.projeto_id = pa.projeto_id
+        WHERE p.profissional_id IS NULL
+           OR pr.projeto_id IS NULL
+    ) THEN
+        RAISE EXCEPTION 'Há referência a profissional ou projeto inexistente.';
+    END IF;
+
+    IF EXISTS (
+        SELECT 1
+        FROM stg_participacoes
+        GROUP BY projeto_id, profissional_id
+        HAVING COUNT(*) > 1
+    ) THEN
+        RAISE EXCEPTION 'Há mais de uma participação do profissional no mesmo projeto.';
+    END IF;
+
+    -- Os períodos históricos começam no início da análise, são contínuos e não se sobrepõem.
+    IF EXISTS (
+        SELECT 1
+        FROM stg_profissionais p
+        LEFT JOIN stg_historico_senioridade h
+            ON h.profissional_id = p.profissional_id
+        GROUP BY p.profissional_id
+        HAVING COUNT(h.historico_id) = 0
+            OR MIN(h.data_inicio) <> DATE '2021-01-01'
+    ) THEN
+        RAISE EXCEPTION 'Há profissional sem histórico iniciado em 2021-01-01.';
+    END IF;
+
+    IF EXISTS (
+        SELECT 1
+        FROM (
+            SELECT
+                profissional_id,
+                data_inicio,
+                data_fim,
+                LEAD(data_inicio) OVER (
+                    PARTITION BY profissional_id
+                    ORDER BY data_inicio
+                ) AS proxima_data_inicio
+            FROM stg_historico_senioridade
+        ) periodos
+        WHERE (
+            proxima_data_inicio IS NULL
+            AND data_fim IS NOT NULL
+        ) OR (
+            proxima_data_inicio IS NOT NULL
+            AND (
+                data_fim IS NULL
+                OR data_fim <> proxima_data_inicio - 1
+            )
+        )
+    ) THEN
+        RAISE EXCEPTION 'Há lacuna, sobreposição ou fim indevido no histórico de senioridade.';
+    END IF;
+
+    -- Projetos dentro do período e com datas coerentes até o corte.
+    IF EXISTS (
+        SELECT 1
+        FROM stg_projetos
+        WHERE data_inicio < DATE '2021-01-01'
+           OR data_inicio > DATE '2026-06-30'
+           OR (
+                status = 'Concluído'
+                AND (
+                    data_conclusao IS NULL
+                    OR data_conclusao < data_inicio
+                    OR data_conclusao > DATE '2026-06-30'
+                )
+           )
+           OR (
+                status = 'Em andamento'
+                AND data_conclusao IS NOT NULL
+           )
+           OR status NOT IN ('Concluído', 'Em andamento')
+    ) THEN
+        RAISE EXCEPTION 'Há status ou datas inválidas em projetos.';
+    END IF;
+
+    IF (
+        SELECT COUNT(*)
+        FROM stg_projetos
+        WHERE status = 'Concluído'
+    ) <> 210 OR (
+        SELECT COUNT(*)
+        FROM stg_projetos
+        WHERE status = 'Em andamento'
+    ) <> 10 THEN
+        RAISE EXCEPTION 'Distribuição de status dos projetos diferente da revisada.';
+    END IF;
+
+    FOR ano IN 2021..2025 LOOP
+        IF (
+            SELECT COUNT(*)
+            FROM stg_projetos
+            WHERE status = 'Concluído'
+              AND EXTRACT(YEAR FROM data_conclusao) = ano
+        ) <> 36 THEN
+            RAISE EXCEPTION 'Quantidade de projetos concluídos inesperada em %.', ano;
+        END IF;
+    END LOOP;
+
+    IF (
+        SELECT COUNT(*)
+        FROM stg_projetos
+        WHERE status = 'Concluído'
+          AND data_conclusao >= DATE '2026-01-01'
+          AND data_conclusao <= DATE '2026-06-30'
+    ) <> 30 THEN
+        RAISE EXCEPTION 'Esperados 30 projetos concluídos no período parcial de 2026.';
+    END IF;
+
+    -- O gerador prevê de 2 a 4 profissionais por projeto.
+    IF EXISTS (
+        SELECT pr.projeto_id
+        FROM stg_projetos pr
+        LEFT JOIN stg_participacoes pa
+            ON pa.projeto_id = pr.projeto_id
+        GROUP BY pr.projeto_id
+        HAVING COUNT(pa.participacao_id) NOT BETWEEN 2 AND 4
+    ) THEN
+        RAISE EXCEPTION 'Há projeto com quantidade de participações fora do intervalo 2–4.';
+    END IF;
+
+    -- Cada participação em projeto concluído deve encontrar uma senioridade na data de conclusão.
+    IF EXISTS (
+        SELECT pa.participacao_id
+        FROM stg_participacoes pa
+        JOIN stg_projetos pr
+            ON pr.projeto_id = pa.projeto_id
+        LEFT JOIN stg_historico_senioridade h
+            ON h.profissional_id = pa.profissional_id
+           AND h.data_inicio <= pr.data_conclusao
+           AND (h.data_fim IS NULL OR h.data_fim >= pr.data_conclusao)
+        WHERE pr.status = 'Concluído'
+        GROUP BY pa.participacao_id
+        HAVING COUNT(h.historico_id) <> 1
+    ) THEN
+        RAISE EXCEPTION 'Participação sem exatamente uma senioridade na data de conclusão.';
+    END IF;
+END
+$validacao$;
+
+INSERT INTO raw.profissionais (
+    profissional_id, nome, data_admissao, status
+)
+SELECT profissional_id, nome, data_admissao, status
+FROM stg_profissionais;
+
+INSERT INTO raw.historico_senioridade (
+    historico_id, profissional_id, senioridade, data_inicio, data_fim
+)
+SELECT historico_id, profissional_id, senioridade, data_inicio, data_fim
+FROM stg_historico_senioridade;
+
+INSERT INTO raw.projetos (
+    projeto_id, nome, data_inicio, data_conclusao, complexidade, tipo, status
+)
+SELECT projeto_id, nome, data_inicio, data_conclusao, complexidade, tipo, status
+FROM stg_projetos;
+
+INSERT INTO raw.participacoes (
+    participacao_id, projeto_id, profissional_id, papel, horas
+)
+SELECT participacao_id, projeto_id, profissional_id, papel, horas
+FROM stg_participacoes;
+
+-- Contagens que devem aparecer antes do COMMIT.
+SELECT 'profissionais' AS tabela, COUNT(*) AS registros FROM raw.profissionais
+UNION ALL
+SELECT 'historico_senioridade', COUNT(*) FROM raw.historico_senioridade
+UNION ALL
+SELECT 'projetos', COUNT(*) FROM raw.projetos
+UNION ALL
+SELECT 'participacoes', COUNT(*) FROM raw.participacoes;
+
+COMMIT;
