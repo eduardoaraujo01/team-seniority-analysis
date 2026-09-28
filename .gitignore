@@ -2,6 +2,7 @@
 .env.*
 !.env.example
 .DS_Store
+.idea/
 *.dump
 *.backup
 AGENTS.md
