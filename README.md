@@ -129,7 +129,7 @@ erDiagram
 Na raiz do repositório, crie o arquivo `.env` a partir do modelo:
 
 ```bash
-cp .env.example .env
+cp ..env.example ..env
 ```
 
 Edite o `.env` e defina uma senha local para o PostgreSQL. **Não publique nem compartilhe o arquivo `.env`.**
