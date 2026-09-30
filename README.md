@@ -4,7 +4,7 @@ Projeto de portfólio para analisar a distribuição temporal de projetos e part
 
 O projeto utiliza **dados fictícios** e demonstra um fluxo de análise que parte de arquivos CSV, passa pela carga e validação no PostgreSQL e, ao final, alimenta consultas analíticas e um dashboard em Excel.
 
-> **Status:** em desenvolvimento. A geração dos dados fictícios e os scripts iniciais de banco e importação já estão no repositório. As análises em SQL e o dashboard ainda serão desenvolvidos e validados.
+> **Status:** os dados fictícios já foram carregados e auditados no PostgreSQL. As análises e as duas views de senioridade estão criadas. Scripts aditivos para preparar e validar a camada staging estão em sql/09 a sql/13; confira a seção abaixo antes de executá-los no banco local.
 
 ## Objetivo
 
@@ -40,8 +40,8 @@ Os 220 projetos incluem 210 concluídos e 10 em andamento na data de corte. Há 
 
 - **Python:** geração dos dados fictícios em CSV.
 - **Docker Compose e PostgreSQL 17:** execução local do banco de dados.
-- **SQL:** criação das tabelas, importação, validações e futuras análises.
-- **Excel e Power Query:** preparação e visualização dos resultados — etapa planejada.
+- **SQL:** tabelas e carga em raw, auditorias, análises de senioridade e scripts aditivos para staging.
+- **Excel e Power Query:** há uma planilha de análise no repositório; sua validação visual e atualização após a migração ainda estão pendentes.
 
 ```mermaid
 flowchart LR
@@ -104,12 +104,14 @@ erDiagram
 ```text
 .
 ├── data/                       # CSVs fictícios gerados pelo script
-├── excel/                      # Pasta prevista para o dashboard
+├── excel/                      # Análises e planilha em desenvolvimento
 ├── scripts/
 │   └── data_generate.py        # Geração e validação dos dados
 ├── sql/
 │   ├── 01_create_tables.sql    # Criação do schema raw e das tabelas
-│   └── 02_import_raw.psql      # Importação e validação dos CSVs
+│   ├── 02_import_raw.psql      # Importação e validação dos CSVs
+│   ├── 09–13                   # Preparação, carga e validação de staging
+│   └── README.md               # Ordem segura de execução
 ├── .env.example                # Modelo de configuração local
 ├── docker-compose.yml          # Serviço PostgreSQL
 └── README.md
@@ -129,7 +131,7 @@ erDiagram
 Na raiz do repositório, crie o arquivo `.env` a partir do modelo:
 
 ```bash
-cp ..env.example ..env
+cp .env.example .env
 ```
 
 Edite o `.env` e defina uma senha local para o PostgreSQL. **Não publique nem compartilhe o arquivo `.env`.**
@@ -180,20 +182,27 @@ O script de importação usa o comando `\copy` do `psql` para ler os CSVs locais
 
 A importação valida as quantidades esperadas, IDs, referências, datas, períodos de senioridade e regras definidas para os projetos. Ela também interrompe a execução se encontrar dados prévios nas tabelas `raw`, para evitar duplicações ou sobrescritas.
 
-## Métricas planejadas
+## Métricas disponíveis
 
-As consultas analíticas deverão apresentar separadamente:
+Os SQLs 06 e 07 apresentam separadamente:
 
 - Quantidade de projetos concluídos por período e senioridade.
 - Quantidade de participações por período e senioridade.
-- Volume de participações normalizado pela média de profissionais da categoria no intervalo analisado.
+- Volume de participações dividido pela média mensal de profissionais da categoria, usando o retrato no último dia de cada mês.
 - Comparações que identifiquem 2026 como um período parcial.
 
-A definição final da unidade temporal do denominador — por exemplo, a média mensal de profissionais de cada categoria — será registrada nas consultas e views antes de publicar os resultados.
+A unidade temporal do denominador está documentada no SQL 07: média mensal de profissionais por senioridade, calculada pelo retrato no fim de cada mês; em 2026 entram janeiro a junho.
 
+## Estado do banco e próxima execução
+
+A inspeção de 30/09/2026 confirmou PostgreSQL 17.11 no Docker e os seguintes dados no schema raw: 10 profissionais, 18 períodos de senioridade, 220 projetos e 668 participações. Não foram encontrados IDs duplicados, registros órfãos, lacunas ou sobreposições temporais. As duas views existentes retornam 638 participações concluídas cada.
+
+O schema raw continua sendo a origem original e não tem constraints. Para preservar esta origem e, ao mesmo tempo, demonstrar integridade relacional, os scripts 09–13 em sql/ preparam tabelas validadas em staging, copiam os mesmos IDs e dados e mantêm os nomes e colunas atuais das views. A carga em staging e a migração das views ainda não foram aplicadas ao banco original. A sequência 09–13 foi executada com sucesso em um container PostgreSQL temporário, restaurado de uma cópia dos dados; as contagens e os resultados das views coincidiram integralmente.
+
+Antes de executar a migração, faça backup e use a sequência da [documentação dos SQLs](sql/README.md). Pare se alguma validação indicar divergência. Os arquivos de criação/carga não apagam nem substituem dados; a migração das views só muda a origem das duas views analíticas depois de confirmar a equivalência do conteúdo.
 ## Resultados e dashboard
 
-As consultas analíticas, os principais achados e as imagens do dashboard serão incluídos nesta seção após a implementação e validação das métricas.
+As análises SQL atuais estão nos arquivos 06 e 07; as duas views são descritas e criadas em 08. A planilha Excel já está presente, mas a validação visual e sua atualização para a camada staging ainda estão pendentes. Os principais achados do negócio serão documentados depois dessa revisão.
 
 ## Limitações
 
